@@ -1,0 +1,56 @@
+body{
+margin:0;font-family:Segoe UI;background:#f2f5ff;
+}
+header{
+background:linear-gradient(90deg,#4e54c8,#8f94fb);
+color:#fff;text-align:center;padding:25px;
+}
+nav{
+background:#fff;text-align:center;padding:10px;
+box-shadow:0 2px 6px rgba(0,0,0,.1)
+}
+nav button{
+background:#4e54c8;color:#fff;
+border:none;padding:10px 14px;
+margin:5px;border-radius:5px;cursor:pointer;
+}
+nav button:hover{background:#363abf}
+
+.card{
+display:none;background:#fff;margin:20px;
+padding:20px;border-radius:10px;
+box-shadow:0 8px 20px rgba(0,0,0,.1)
+}
+h2{color:#4e54c8}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:10px
+}
+input{
+padding:10px;border-radius:5px;border:1px solid #ccc
+}
+button.success{background:#2ecc71;color:#fff}
+button.danger{background:#e74c3c;color:#fff}
+button.primary{background:#3498db;color:#fff}
+button{border:none;padding:10px 15px;border-radius:5px}
+
+.search{width:280px;margin-bottom:10px}
+
+table{width:100%;border-collapse:collapse}
+th{
+background:#4e54c8;color:#fff;padding:10px
+}
+td{padding:8px;text-align:center;border-bottom:1px solid #ddd}
+tr:hover{background:#f1f3ff}
+
+.stats{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px
+}
+.stat{
+background:#eef1ff;padding:20px;border-radius:10px;
+text-align:center;font-size:18px
+}
+.note{color:#777;margin-top:10px}
