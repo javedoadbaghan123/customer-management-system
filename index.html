@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Multi Branch Recovery System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Multi-Branch Recovery Management</h1>
+  <p>Customer • Installment • History • Reports</p>
+</header>
+
+<nav>
+  <button onclick="show('admin')">🔐 Admin & Branch</button>
+  <button onclick="show('customer')">🧾 Customer Entry</button>
+  <button onclick="show('master')">📊 Master Sheet</button>
+  <button onclick="show('history')">📂 History</button>
+  <button onclick="show('records')">📈 Records</button>
+</nav>
+
+<!-- ================= ADMIN ================= -->
+<section id="admin" class="card">
+<h2>Admin & Branch Management</h2>
+<input placeholder="Branch Name">
+<input placeholder="Admin Username">
+<input type="password" placeholder="Password">
+<button class="primary">Save / Update</button>
+<p class="note">Head office can see all branches (Demo)</p>
+</section>
+
+<!-- ================= CUSTOMER ENTRY ================= -->
+<section id="customer" class="card">
+<h2>Customer Entry</h2>
+
+<div class="grid">
+<input id="cid" placeholder="Customer ID">
+<input id="cname" placeholder="Customer Name">
+<input id="fname" placeholder="Father / Husband Name">
+<input id="mobile" placeholder="Mobile">
+<input id="address" placeholder="Address">
+<input id="qty" type="number" placeholder="Total Items">
+<input id="total" type="number" placeholder="Total Amount">
+<input id="advance" type="number" placeholder="Advance">
+<input id="monthly" type="number" placeholder="Monthly Installment">
+</div>
+
+<button class="success" onclick="saveCustomer()">Save</button>
+<button class="danger" onclick="clearForm()">Clear</button>
+</section>
+
+<!-- ================= MASTER SHEET ================= -->
+<section id="master" class="card">
+<h2>Master Sheet</h2>
+<input class="search" placeholder="Search ID / Name / Mobile" onkeyup="search(this.value)">
+
+<table>
+<thead>
+<tr>
+<th>ID</th><th>Name</th><th>Mobile</th>
+<th>Total</th><th>Paid</th><th>Remaining</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody id="masterBody"></tbody>
+</table>
+</section>
+
+<!-- ================= HISTORY ================= -->
+<section id="history" class="card">
+<h2>Paid Customers History</h2>
+<table>
+<thead>
+<tr><th>ID</th><th>Name</th><th>Total Paid</th></tr>
+</thead>
+<tbody id="historyBody"></tbody>
+</table>
+</section>
+
+<!-- ================= RECORDS ================= -->
+<section id="records" class="card">
+<h2>Reports & Records</h2>
+<div class="stats">
+<div class="stat">Today Recovery<br><b id="today">0</b></div>
+<div class="stat">Total Customers<br><b id="count">0</b></div>
+<div class="stat">Total Amount<br><b id="sum">0</b></div>
+</div>
+<p class="note">Detailed reports available in full version</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
